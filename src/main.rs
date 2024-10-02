@@ -1,9 +1,8 @@
 use actix_web::{web, App, HttpServer, Responder, HttpResponse};
-mod router;
-mod middleware;
-
 use router::{hello, echo, manual_hello};
 use crate::router::home;
+mod router;
+mod middleware;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
